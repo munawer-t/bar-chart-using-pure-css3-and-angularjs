@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="angular.v1.2.12.js"></script>
+    <script src="jquery-1.10.2.min.js"></script>
+    <script src="bar-chart-directives.js"></script>
+    <script src="bar-chart-controllers.js"></script>
+    <link href="bar-chart.css" rel="stylesheet">
+    <link href="bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app="myapp">
+<div ng-controller="GraphController" class="charts-container">
+    <div class="row">
+        <div class="tab-pane active">
+            <section class="chart-panel">
+                <header class="panel-head clearfix">
+                    <a class="colapce-btn" collapse-btn>-</a>
+                    <h3>Site Traffic [Two column]</h3>
+                    <div class="pull-right">
+                        <label class="panel-label ">Views <i class="bar-gf blue"></i></label>
+                        <label class="panel-label ">uniques <i class="bar-gf green"></i></label>
+                    </div>
+                </header>
+                <div class="chart-panel-body">
+                    <bargraph-two-column data="graphTwoColumnData" colors="graphTwoColumnDataColors"
+                                            legends="graphTwoColumnDataLegends">
+                    </bargraph-two-column>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="tab-pane active">
+            <section class="chart-panel">
+                <header class="panel-head clearfix">
+                    <a class="colapce-btn" collapse-btn>-</a>
+                    <h3>Social traffic [Four column]</h3>
+                    <div class="pull-right">
+                        <label class="panel-label ">Linkedin <i class="bar-gf gray"></i></label>
+                        <label class="panel-label ">Facebook <i class="bar-gf green"></i></label>
+                        <label class="panel-label ">Twitter <i class="bar-gf red"></i></label>
+                        <label class="panel-label ">Total <i class="bar-gf blue"></i></label>
+                    </div>
+                </header>
+                <div class="chart-panel-body">
+
+                    <bargraph-four-column data="graphFourColumnData" colors="graphFourColumnDataColors"
+                                             legends="graphFourColumnDataLegends">
+                    </bargraph-four-column>
+                </div>
+
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>
